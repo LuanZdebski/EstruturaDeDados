@@ -1,21 +1,29 @@
 public class Teste {
+
     
     public static void main(String[] args) {
 
-        Pilha<String> pilhaDeStrings = new Pilha<>();
+        Encadeada<String> listaEncadeada = new Encadeada<String>();
+        
+        listaEncadeada.addNode("Maria");
+        listaEncadeada.addNode("Antonio");
+        listaEncadeada.addNode("UniBrasil");
+        listaEncadeada.addNode("Marcos");
+        listaEncadeada.addNode("Joao");
+        listaEncadeada.addNode("Karine");
+        listaEncadeada.addNode("Karina");
+        listaEncadeada.addNode("Luis");
+        listaEncadeada.addNode("Jose");
+        listaEncadeada.addNode("Luan Matheus Zdebski da Silva");
+        System.out.print(listaEncadeada.toString());
 
-        System.out.println("vazio:" + pilhaDeStrings.isEmpty());
+        listaEncadeada.removeNode();
+        System.out.print(listaEncadeada.toString());
+        
+        listaEncadeada.clearEncadeada();
+        System.out.print(listaEncadeada.toString());
 
-        pilhaDeStrings.push("alguma coisa");
-        pilhaDeStrings.push("Outra coisa");
-
-        System.out.println("vazio:" + pilhaDeStrings.isEmpty());
-        System.out.println("tamanho:" + pilhaDeStrings.size());
-        System.out.println(pilhaDeStrings.toString());
-
-        System.out.println("Aqui tiramos o valor do topo que eh:" + pilhaDeStrings.pop());
-
-        System.out.println(pilhaDeStrings.toString());
+        
     }
     
 }
