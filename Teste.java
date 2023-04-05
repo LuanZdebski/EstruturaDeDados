@@ -3,26 +3,28 @@ public class Teste {
     
     public static void main(String[] args) {
 
-        Encadeada<String> listaEncadeada = new Encadeada<String>();
+        DuplaEncadeada<String> lista = new DuplaEncadeada<String>();
         
-        listaEncadeada.addNode("Maria");
-        listaEncadeada.addNode("Antonio");
-        listaEncadeada.addNode("UniBrasil");
-        listaEncadeada.addNode("Marcos");
-        listaEncadeada.addNode("Joao");
-        listaEncadeada.addNode("Karine");
-        listaEncadeada.addNode("Karina");
-        listaEncadeada.addNode("Luis");
-        listaEncadeada.addNode("Jose");
-        listaEncadeada.addNode("Luan Matheus Zdebski da Silva");
-        System.out.print(listaEncadeada.toString());
+        // add valores na lista encadeada
+        DoubleNode<String> manyNode = new DoubleNode<>("many", null, null);
+        lista.addFirst(manyNode);
 
-        listaEncadeada.removeNode();
-        System.out.print(listaEncadeada.toString());
+        DoubleNode<String> newNode = new DoubleNode<>("qualquer", null, null);
+        lista.addLast(newNode);
+
+        newNode = new DoubleNode<>("depois porem em primeiro", null, null);
+        lista.addFirst(newNode);
+
+        newNode = new DoubleNode<>("adicione-me depois de many", null, null);
+        lista.addAfter(manyNode, newNode);
+
+        newNode = new DoubleNode<>("adicione-me antes de many", null, null);
+        lista.addBefore(manyNode, newNode);
+
         
-        listaEncadeada.clearEncadeada();
-        System.out.print(listaEncadeada.toString());
 
+        System.out.println(lista.toString());
+        
         
     }
     

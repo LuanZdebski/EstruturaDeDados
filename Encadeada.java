@@ -15,10 +15,12 @@ public class Encadeada<T> implements IEncadeada<T> {
         this.size++;
     }
 
-    public void removeNode() {
+    public T removeNode() {
         Node<T> newPointer = this.head.getPointer();
+        T retorno = this.head.getValor();
         this.head = newPointer;
         this.size--;
+        return retorno;
     }
 
     public void clearEncadeada() {
