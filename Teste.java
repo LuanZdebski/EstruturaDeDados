@@ -3,28 +3,17 @@ public class Teste {
     
     public static void main(String[] args) {
 
-        DuplaEncadeada<String> lista = new DuplaEncadeada<String>();
-        
-        // add valores na lista encadeada
-        DoubleNode<String> manyNode = new DoubleNode<>("many", null, null);
-        lista.addFirst(manyNode);
+        int[] vetor = {4, 60, 22, 1, 20};
+        Ordenation ord = new Ordenation();
 
-        DoubleNode<String> newNode = new DoubleNode<>("qualquer", null, null);
-        lista.addLast(newNode);
+        ord.PorSelecao(vetor);
 
-        newNode = new DoubleNode<>("depois porem em primeiro", null, null);
-        lista.addFirst(newNode);
+        for (int i : vetor) {
+            System.out.println(i);
+        }
 
-        newNode = new DoubleNode<>("adicione-me depois de many", null, null);
-        lista.addAfter(manyNode, newNode);
-
-        newNode = new DoubleNode<>("adicione-me antes de many", null, null);
-        lista.addBefore(manyNode, newNode);
-
-        
-
-        System.out.println(lista.toString());
-        
+        System.out.println(BinarySearch.Search(22, vetor));
+                
         
     }
     
